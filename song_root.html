@@ -1,0 +1,78 @@
+<html>
+<style>
+body {{
+font-family: sans-serif;
+}}
+
+#go {{
+font-size: 30px;
+float: right;
+padding: 0.5em 1em;
+}}
+
+ul {{
+clear: both;
+}}
+
+li {{
+display: inline-block;
+border: 1px solid #888;
+background: #eee;
+margin: 1em;
+padding: 1em;
+width: 5em;
+border-radius: 5px;
+cursor: pointer;
+}}
+
+li:hover {{
+background: #ddd;
+}}
+
+li.highlighted {{
+background: #88e;
+}}
+
+li h2 {{
+text-align: center;
+margin: 0;
+}}
+
+li h3 {{
+text-align: center;
+margin: 0;
+font-size: 12px;
+font-weight: normal;
+color: #888;
+}}
+
+</style>
+<script type="text/javascript">
+function toggle(noteid) {{
+var elem = document.getElementById(noteid);
+if (elem.className === "highlighted") {{
+    elem.className = "";
+}} else {{
+    elem.className = "highlighted";
+}}
+}}
+
+function go() {{
+var elems = document.querySelectorAll('.highlighted');
+var url = window.location;
+console.log(elems);
+elems.forEach(function(e) {{
+    url = url + e.id + "/";
+}});
+console.log(url);
+window.location = url;
+}}
+</script>
+<body>
+<button id="go" onclick="go()">Next</button>
+<h1>{song_title}</h1>
+<ul>
+{buttons}
+</ul>
+</body>
+</html>

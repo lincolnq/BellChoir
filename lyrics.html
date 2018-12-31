@@ -1,0 +1,54 @@
+<html>
+<style>
+body {{
+    font-family: sans-serif;
+}}
+
+.lyric {{
+    color: #888;
+    font-size: 18px;
+}}
+
+span {{
+    position: relative;
+}}
+
+.l1,.l2,.l3,.l4 {{
+    color: #000;
+}}
+
+.l1 {{
+    border: 1px solid #a20;
+    border-radius: 50%;
+}}
+
+.l2 {{
+    text-decoration: underline;
+    color: #2a2;
+}}
+
+.l3:after, .l4:after {{
+    position: absolute;
+    top: 1em;
+}}
+.l3:after {{
+    color: #24c;
+    content: "\2731";
+    left: 0px;
+}}
+.l4:after {{
+    color: #a2c;
+    content: "\2020";
+    left: 0px;
+}}
+h2 {{
+    font-size: 18px;
+    margin-bottom: 2em;
+}}
+</style>
+<body>
+<h1>{song_title}</h1>
+<h2>{legend}</h2>
+{lyrics}
+</body>
+</html>
